@@ -1,0 +1,33 @@
+/* reset dei margini */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* debug  */
+.row {
+  background-color: pink;
+}
+.container-fluid .row [class*="col-"],
+.container .row [class*="col-"] {
+  height: 150px;
+  position: relative;
+  border: 1px solid black;
+}
+.container-fluid .row [class*="col-"] > .row,
+.container .row [class*="col-"] > .row {
+  height: 100%;
+  background-color: lightcoral;
+}
+.container-fluid > .row [class*="col-"] > .row > [class*="col-"]
+.container > .row [class*="col-"] > .row > [class*="col-"] {
+  height: 100%;
+  border-color: white;
+}
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* /debug */

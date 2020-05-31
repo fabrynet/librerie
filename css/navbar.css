@@ -1,0 +1,33 @@
+/* navbar */
+.navbar {
+  position: relative;
+  min-height: 60px;
+  margin-bottom: 20px;
+}
+.navbar-fixed {
+  position: fixed;
+}
+/* menu di navigazione inline */
+ul.inline-menu {
+  list-style-type: none;
+  overflow: hidden;
+}
+li.inline-menu-item {
+  float: left;
+}
+li.inline-menu-item a {
+  display: block;
+  position: relative;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+}
+li.inline-menu-item a:hover {
+  transition: 0.5s;
+  background-color: #fff;
+  border-radius: 5px;
+}
+li.inline-menu-item a:visited {
+  color: #000;
+}
+/* menu hamburger */
