@@ -5,6 +5,8 @@
     <title>CSSNavbar</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
+    <script type="text/javascript" src="js/font-awesome.js"></script>
     <link rel="stylesheet" href="css/12bool.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/navbar.css">
@@ -14,11 +16,82 @@
       <div class="row">
         <div class="col-12">
           <nav class="navbar">
-            <ul class="inline-menu">
-              <li class="inline-menu-item"><a href="#">link</a></li>
-              <li class="inline-menu-item"><a href="#">link</a></li>
-              <li class="inline-menu-item"><a href="#">link</a></li>
-            </ul>
+            <div class="navbar-logo">
+              <a href="#"><img src="img/logo.png" alt="Logo"></a>
+              <!-- <span class="title">LOGO</span> -->
+            </div>
+            <div class="navbar-middle">
+              <ul class="menu">
+                <li class="menu-item"><a href="#">link</a></li>
+                <li class="menu-item"><a href="#">link</a></li>
+                <li class="menu-item dropdown">
+                  <a href="#">link&nbsp;
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                  <ul class="menu-dropdown">
+                    <li class="menu-dropdown-item">
+                      <a class="link-dropdown" href="#">
+                        <div class="img-dropdown">
+                          <img src="img/marketing.webp" alt="Marketing">
+                        </div>
+                        <div class="content-dropdown">
+                          <div class="title-dropdown">
+                            Titolo Dropdown
+                          </div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="menu-dropdown-item">
+                      <a href="#" class="link-dropdown">link</a>
+                    </li>
+                    <li class="menu-dropdown-item">
+                      <a href="#" class="link-dropdown">link</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="navbar-right">
+              <ul class="menu">
+                <li class="menu-item dropdown">
+                  <a href="#">link&nbsp;
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                  <ul class="menu-dropdown">
+                    <li class="menu-dropdown-item">
+                      <a class="link-dropdown" href="#">
+                        <div class="img-dropdown">
+                          <img src="img/marketing.webp" alt="Marketing">
+                        </div>
+                        <div class="content-dropdown">
+                          <div class="title-dropdown">
+                            Titolo Dropdown
+                          </div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="menu-dropdown-item">
+                      <a href="#">link</a>
+                    </li>
+                    <li class="menu-dropdown-item">
+                      <a href="#">link</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item"><a href="#">link</a></li>
+                <li class="menu-item"><a href="#">link</a></li>
+              </ul>
+              <div class="button-hamburger">
+                ciao
+                <ul class="menu-hamburger">
+                  <li><a href="#">link</a></li>
+                  <li><a href="#">link</a></li>
+                  <li><a href="#">link</a></li>
+                </ul>
+              </div>
+            </div>
           </nav>
         </div>
       </div>
