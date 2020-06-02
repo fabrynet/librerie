@@ -23,7 +23,7 @@
 .navbar-middle,
 .navbar-right {
   position: relative;
-  min-height: 60px;
+  height: 60px;
   border: 1px solid black;
 }
 .navbar-logo {
@@ -41,7 +41,8 @@
 }
 .navbar-logo img {
   max-width: 80%;
-  max-height: 38px;
+  min-width: 150px;
+  max-height: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -59,7 +60,8 @@ li.menu-item {
 .navbar-right li.menu-item {
   float: right;
 }
-li.menu-item a {
+li.menu-item a,
+li.menu-dropdown a {
   display: block;
   position: relative;
   margin: 10px 0;
@@ -94,40 +96,36 @@ ul.menu-dropdown {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
-ul.menu-dropdown a.link-dropdown {
-  color: #000;
-  padding: 10px 20px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  font-size: 1em;
-  font-weight: 600;
+li.menu-dropdown-item .img-dropdown {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
 }
-ul.menu-dropdown a.link-dropdown p {
+li.menu-dropdown-item img {
+  width: 100%;
+}
+.content-dropdown {
+  display: inline-block;
+}
+.content-dropdown p {
   padding: 0;
   font-weight: normal;
   font-size: 0.8em;
   line-height: 1.5em;
 }
-ul.menu-dropdown a.link-dropdown hr {
+.content-dropdown hr {
   margin: 10px 0;
   color: lightgrey;
   border: 1px solid lightgrey;
 }
-ul.menu-dropdown a.link-dropdown .title-dropdown {
+.content-dropdown .title-dropdown {
   font-size: 1.2em;
   font-weight: 600;
   display: block;
   padding: 10px 0;
 }
-li.menu-dropdown a.link-dropdown:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-}
-li.menu-dropdown-item .img-dropdown {
-  display: inline-block;
-  vertical-align: top;
-}
+
+
 .dropdown:hover ul.menu-dropdown {
   display: block;
 }
@@ -136,8 +134,15 @@ li.menu-dropdown-item .img-dropdown {
 .button-hamburger {
   display: none;
 }
+.button-hamburger i {
+  width: 40px;
+}
 ul.menu-hamburger {
   /* display: none; */
+  /* position: absolute; */
+  width: 100%;
+  left:0;
+  top: 60px;
   list-style-type: none;
   text-align: left;
   background-color: #fff;
@@ -150,6 +155,12 @@ ul.menu-hamburger {
 @media (max-width:767px) {
   .navbar-logo {
     width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .navbar-right {
+    width: 50px;
   }
   .navbar-middle,
   ul.menu {
