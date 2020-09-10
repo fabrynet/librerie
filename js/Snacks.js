@@ -45,6 +45,35 @@ function bubbleSort(array) {
   return array;
 }
 
+// Funzione che ordina un oggetto JS (array nominale) secondo la chiave che gli passiamo
+// Ordine decrescente
+function sortByKeyDesc(array, key) {
+    return array.sort(function(a, b) {
+        var x = a[key];
+        var y = b[key];
+        return ((x < y) ? 1 : ((x > y) ? -1 : 0));
+    });
+}
+
+// Funzione che ordina un oggetto JS secondo la chiave che gli passiamo
+// Ordine crescente
+function sortByKeyAsc(array, key) {
+    return array.sort(function(a, b) {
+        var x = a[key];
+        var y = b[key];
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+    });
+}
+
+// funzione che restituisce l'orario attuale a due cifre
+function getActualHour () {
+  var d = new Date();
+  var hours = ("0" + d.getHours()).slice(-2);
+  var minutes = ("0" + d.getMinutes()).slice(-2)
+  var time = hours + ":" + minutes;
+  return time;
+}
+
 // funzione che controlla se un elemento è presente nell'array
 function inArray(array, element) {
   var i = 0;
@@ -80,7 +109,7 @@ function inRange(min, max, num) {
   return false;
 }
 
-// Funzioni Utility
+// Funzione che inverte una stringa
 function stringInvert(string) {
   var stringInverted = "";
   for (var i = string.length -1; i >= 0; i--) {
@@ -89,6 +118,7 @@ function stringInvert(string) {
   return stringInverted;
 }
 
+//Funziona che controlla se una stringa è palindroma
 function isPalindroma(string) {
   var stringInverted = stringInvert(string);
   if (stringInverted == string) {
@@ -98,6 +128,7 @@ function isPalindroma(string) {
   }
 }
 
+//Funzione che controlla se un numero è pari
 function isPari(num) {
   if (num%2) {
     return false;
